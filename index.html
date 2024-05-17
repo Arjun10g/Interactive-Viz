@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Template</title>
+</head>
+<link rel="stylesheet" href="index.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+<script>
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js"],
+        jax: ["input/TeX", "output/HTML-CSS"],
+        tex2jax: {
+            inlineMath: [['\\(', '\\)']],
+            displayMath: [['\\[', '\\]']],
+            processEscapes: true
+        },
+        "HTML-CSS": { scale: 90 },
+    });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/ScrollTrigger.min.js" integrity="sha512-AMl4wfwAmDM1lsQvVBBRHYENn1FR8cfOTpt8QVbb/P55mYOdahHD4LmHM1W55pNe3j/3od8ELzPf/8eNkkjISQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Observer.min.js" integrity="sha512-7xTD1meeGGoAzwZKA0Z8YelV3qAvRltuwACWXpnxtneF7VAMztOTAi3t4laVSaE4Znq4LMPeGUIYWEvKEk5r3Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/Draggable.min.js" integrity="sha512-S6SXKUZ11xkCoD/UuhdXG4B4iiCXng+xW2KCx0lgfQqmdqtjqGgm4WChdYIhO1F/CmH21vnkSUvPEgXNgDwkjg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="index.js" defer></script>
+<body>
+
+    <div class="nav-bar">
+        <div class="logo"><h1>A/G</h1></div>
+        <div class="sections">
+            <div class="sections-sub">
+                <a href="#sec1">Intro</a>
+                <div class="subheadings">
+                    <a href="#sub1_1">GGplot</a>
+                    <a href="#sub1_2">Data Simulation</a>
+                    <a href="#sub1_3">Highlight Data</a>
+                    <a href="#sub1_4">Data Annotation</a>
+                    <a href="#sub1_5">Plotly</a>
+                    <a href="#sub1_6">Plotly (plot_ly)</a>
+                    <a href="#sub1_7">Plotly Layers</a>
+                    <a href="#sub1_8">GGPlotly</a>
+                </div>
+            </div>
+            <div class="sections-sub">
+                <a href="#sec2">Plots</a>
+                <div class="subheadings">
+                    <a href="#sub2_1">Scatterplot</a>
+                    <a href="#sub2_2">Line Charts</a>
+                    <a href="#sub2_3">Bar Plot</a>
+                    <a href="#sub2_4">Box/Violin Plots</a>
+                    <a href="#sub2_5">2d Frequencies</a>
+                    <a href="#sub2_6">Heatmaps/Contours</a>
+                    <a href="#sub2_7">3D Plots</a>
+                    <a href="#sub2_8">Maps</a>
+                </div>
+            </div>
+            <div class="sections-sub">
+                <a href="#sec3">Linking/Publishing Plots</a>
+                <div class="subheadings">
+                    <a href="#sub3_1">Saving as html</a>
+                    <a href="#sub3_2">Arranging Interactive Plots</a>
+                    <a href="#sub3_3">Animating Views</a>
+                    <a href="#sub3_4">Linking Views</a>
+                    <a href="#sub3_5">Linking Sub-Plots</a>
+                    <a href="#sub3_6">Dashboards</a>
+                </div>
+            </div>
+            <div class="sections-sub">
+                <a href="#sec4">Contact/Resources</a>
+                <div class="subheadings">
+                    <a href="#sub4_1">Who Am I?</a>
+                    <a href="#sub4_2">Resources/References</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Introduction -->
+    <div class="intro">
+        <div class="headers">
+            <h1 class="name">Arjun Ghumman</h1>
+            <h1 class="title">Interactive Data Visualization</h1>
+        </div>
+    </div>
+
+    <!-- Section 1 -->
+    <div class="section sec1">
+        <h2 id="sec1">Introduction to IDV (Interactive Data-Vizualization)</h2>
+        <table border="1">
+            <tr>
+              <th>Advantages</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Enhanced Exploration</td>
+              <td>Allows direct interaction, zooming, filtering, and dynamic parameter changes.</td>
+            </tr>
+            <tr>
+              <td>Deeper Understanding</td>
+              <td>Provides context, tooltips, and additional information on demand.</td>
+            </tr>
+            <tr>
+              <td>Iterative Analysis</td>
+              <td>Supports quick iteration through different views, accelerating the EDA process.</td>
+            </tr>
+            <tr>
+              <td>Communication & Collaboration</td>
+              <td>Engages stakeholders, facilitates clearer explanations, and fosters better discussions.</td>
+            </tr>
+            <tr>
+              <td>Complex Data Representation</td>
+              <td>Helps in visualizing multidimensional data in a more understandable manner.</td>
+            </tr>
+            <tr>
+              <td>User-Centric Exploration</td>
+              <td>Puts users in control, allowing personalized insights and exploration.</td>
+            </tr>
+          </table>
+        <p>
+            While R and packages like <i>tidyverse</i> provide powerful tools for data manipulation, visualization, and modeling, interactive data visualization adds another layer of exploration and understanding. I've highlighted several advantages in the context of exploratory data analysis (EDA) and data science workflows above. 
+        </p>
+        <p>Historically when researchers attempt to convey their findings, they often opt to use a different tools or programming languages like JavaScript to create interactive web visuals, showcasing their key discoveries. However, this shift demands a significant change in context, necessitating an entirely different skill set, which often hinders efficiency. Not only does one have to learn a completely different programming language, the learning curve for certain interactive visualization libraries is another challege. While modern interactive tools such as Tableu offer interactivity and offer nice properties, they often do not gel with a coding workflow since such GUI based systems tend to be rather "closed off" that means they don’t allow themselves to be easily customized, extended, or integrated with another system. </p>
+        <h3 id="sub1_1">Grammar of Graphics and GGplot</h3>
+        <p>I <a href="https://arjun10g.github.io/Data-Management/" target="_blank">previously covered</a> the grammar of graphics and GGplot in full detail, additionally, there are several resources available for a gentle introduction to the GGplot framework. Throughout this document, I will be implementing interactivity within the GGplot framework. </p>
+        <h3 id="sub1_2">Simulating Height and Weight Data</h3>
+        <pre>
+            # Simulate Height and Weight Data with R
+
+            misty::descript(starwars)
+            
+            # Simulate Height
+            
+            height &lt; runif(100,120,220)
+            
+            # Simulate Weight 
+            weight &lt; 50 + 0.5 * height + 0.7 * (height^1.5) + rnorm(100, sd = 300)
+            
+            # Rescale 
+            
+            final_weight &lt; (weight - mean(weight))*(40/sd(weight)) + 150
+        </pre>
+        <ul>
+            <li>Step 1: Generate realistic Heights and Weights</li>
+            <li>Step 2: Simulate Height based on chosen data.</li>
+            <li>Step 3: Simulate non-linear relationship between height and weight.</li>
+            <li>Step 4: Rescale the data to make it more realistic.</li>
+        </ul>
+        <h3 id="sub1_3">Highlighting Observations</h3>
+        <p>Highlighting observations is a simple way to add interactivity to a plot. In the example below, I've highlighted a certain segment of observations in the dataset. </p>
+        <pre>
+            # Highlighting Data
+
+            library(plotly)
+
+            key &lt; highlight_key(dat)
+
+            p1 &lt; ggplot(key, aes(height, final_weight)) +
+            geom_point()
+
+            inter_p1 &lt; highlight(ggplotly(p1), "plotly_selected")
+        </pre>
+        <div class="images">
+            <img src="img1.jpeg" alt="">
+            <img src="img2.jpeg" alt="">
+        </div>
+        <p>Above we can see a simple example of how a lasso or selection tool can be used within an interactive framework to highlight certain observations of interest and save them as an image. Allowing users such interactivity, however simplified, such as in this case, adds a new dimension to visualization.</p>
+        <p>When a key insight surfaces, the HTML-generated figures can be easily shared via email or embedded in reports/websites. These interactive visuals, using htmlwidgets, seamlessly work in RMarkdown, Shiny apps, RStudio, Jupyter, etc. Sharing fosters discussions, allowing colleagues to offer fresh perspectives and even glean immediate insights from the graphics.</p>
+
+        <h3 id="sub1_4">Annotating Points</h3>
+        <p>Another way to add interactivity is to annotate points of interest. In the example below, I've annotated the points of interest with their respective domain. Here the use of the ggforce package is demonstrated to annotate certain points into a hull. </p>
+        <pre>library(ggforce)
+
+            dat %>% mutate(tall = ifelse(height > 186, 'tall', 'x')) %>% 
+              ggplot(aes(height, final_weight)) + 
+              geom_point(color = 'black', size = 3, shape = 21, fill = rgb(0,0,0,alpha = 0.5), stroke = 1.1,aes(alpha = tall), show.legend = F) +
+              geom_mark_hull(aes(filter = tall == 'tall', label = tall)) +
+              labs(title = "Weights for Tall People",
+               \t    x = "Height",
+                \t   y = "Weight") +
+              papaja::theme_apa() +
+              scale_alpha_manual(values = c(1,0.2))</pre>
+        <div class="image">
+            <img src="img3.jpeg" alt="">
+        </div>
+        <h3 id="sub1_5">Plotly</h3>
+        <p>Plotly is a library for data visualization, which offers an array of interactive plots like scatter plots, line charts, and 3D visuals. It stands out for its interactivity, allowing users to explore data within the plots themselves by zooming, hovering for details, and toggling data visibility. Compatible with Jupyter, Dash, Shiny, JS and integration with Pandas and NumPy, Plotly is a versatile tool for creating dynamic and engaging visualizations.</p>
+        <div class="toggle-section">
+            <button class = "active">HTML</button>
+            <button>Shiny (R)</button>
+            <button>Markdown (RMarkdown)</button>
+            <button>Jupyter (Python or R)</button>
+            <div id="list-container">
+                <div>
+                    <ol>
+                        <li>Create a Plotly Visualization: Generate an interactive plot using Plotly in Python or R.</li>
+                        <li>Export the Plot as HTML: Save the interactive Plotly visualization as an HTML file using the appropriate functions in Python (plotly.offline.plot) or R (htmlwidgets package).</li>
+                        <li>Include HTML File in Website: Embed the saved HTML file into your website using an HTML <code>iframe</code> tag or directly insert the HTML code to display the Plotly visualization.</li>
+                    </ol>
+                </div>
+                <div class = "hidden">
+                    <ol>
+                        <li>Generate Plotly Plot in Shiny: Use the plotly package within Shiny to create interactive plots.</li>
+                        <li>Render the Plotly Output: Utilize renderPlotly() in the server function to generate the Plotly plot.</li>
+                        <li>Display the Plotly Output: Use plotlyOutput() in the UI function to showcase the rendered Plotly plot within the Shiny app.</li>
+                    </ol>
+                </div>
+                <div class = "hidden">
+                    <ol>
+                        <li>Create Plotly Visualizations: Use the plotly package in RMarkdown to generate interactive plots.</li>
+                        <li>Render Plotly in Markdown: Employ the plotly::plotlyOutput() function in the R code chunk to render the Plotly plot.</li>
+                        <li>Display in HTML Output: Knit the RMarkdown document to HTML, which embeds the interactive Plotly plots in the final HTML output.</li>
+                    </ol>
+                </div>
+                <div class = "hidden">
+                    <ol>
+                        <li>Generate Plotly Visualizations:Use Plotly in Python or R within Jupyter to create interactive plots.</li>
+                        <li>Display in Jupyter Notebook: For Python, use plotly's iplot() or plot() functions. For R, utilize plotly's functions or the htmlwidgets package with R code.</li>
+                        <li>Render and View: Execute the code cells in the Jupyter notebook to view the Plotly plots displayed inline in the notebook.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+        <p>There are two main ways to create a Plotly object:</p>
+        <ul>
+        <li>Transforming a ggplot2 object into a Plotly object using <code>ggplotly()</code>
+        </li>
+        <li>Directly initializing a Plotly object with <code>plot_ly()</code>, <code>plot_geo()</code>, or <code>plot_mapbox()</code>.</li>
+        </ul>
+        <p>Both approaches have somewhat complementary strengths and weaknesses, so it can be beneficial to learn both methods.</p>
+        <h3 id="sub1_6">Plotly (plot_ly)</h3>
+        <p>The <i>Plotly</i> package in R creates plots in R using the underlying library in JavaScript (plotly.js). The plot_ly() function has a direct connection to plotly.js, providing extra simplifications that enhance the plotting procedure. These simplifications, inspired by the Grammar of Graphics and ggplot2, notably expedite the shift between various visuals, making it easier to uncover valuable data insights.</p>
+        <pre>
+            # Bar Graphs
+            plotly_1 &lt;- diamonds %>% plot_ly() %>% add_histogram(x=~cut)
+            plotly_2 &lt;- diamonds %>% plot_ly() %>% add_histogram(x = ~cut, color = I(rgb(0,0,0,1)))
+            plotly_3 &lt;- diamonds %>% plot_ly() %>% add_histogram(x = ~cut, color = I(rgb(0,0,0,1)), stroke = I(rgb(0,0,0,0.2)),span = I(15))
+            plotly_4 &lt;- diamonds %>% plot_ly() %>% add_histogram(x = ~cut, color = I(rgb(0,0,0,1)), stroke = I(rgb(0,0,0,0.2)),span = I(15)) %>% layout(title = 'My Graph')
+
+            # Bar vs Histogram in Plotly
+            hist &lt;- diamonds %>% plot_ly() %>% add_histogram(x = ~cut, stroke = I('black'), span = I(2),bingroup = I(5))
+            bars &lt;- diamonds %>% group_by(cut) %>% count %>% plot_ly() %>% add_bars(x = ~cut, y = ~n, stroke = I('black'), span = I(5))
+
+
+            x &lt;- plotly_json(plotly_1)
+            build &lt;- plotly_build(plotly_1)
+        </pre>
+        <div class="images">
+            <img src="img4.jpeg" alt="">
+            <img src="img5.jpeg" alt="">
+            <img src="img6.jpeg" alt="">
+            <img src="img7.jpeg" alt="">
+        </div>
+        <p>The above code demonstrates creating bar graphs using plot_ly() with various configurations such as different colors, stroke settings, spans, and layout adjustments.</p>
+        <p>Plotly adopts a functional approach akin to the layered grammar of graphics. Here, most functions expect a plotly object as input and yield a modified version of it. These modifications solely depend on the function's input values, unlike base R graphics that often involve side effects. For instance, the layout() function alters layout components like the title within a plotly object.</p>
+        <p>Complex plot modifications in plotly can be challenging to navigate. The %>% operator from magrittr offers a left-to-right reading sequence, placing the object on the left into the first argument of the function on the right. This approach simplifies the understanding of layered modifications (Wickham, 2014).</p>
+        <h3>Putting things together</h3>
+        <pre>
+            diamonds %>% group_by(cut) %>% count() %>% 
+            plot_ly(x = ~cut, y = ~n) %>%
+            add_bars(, stroke = I('black'), span = I(5), color = I(rgb(1,0,0,0.5)))  %>%
+            add_text(text = ~scales::comma(n), y = ~n, textposition = "top middle", cliponaxis = FALSE)
+        </pre>
+        <p>The above code demonstrates how to put things together in plotly. The code is self-explanatory, however, in this example, we add multiple layers to a plotly graph, a text layer in addition to an histogram. The viewers have the option to turn off certain layers in the interactive component. Additionally, we combine the layers using magrittr piping. </p>
+        <div class="image">
+            <img src="img8.jpeg" alt="">
+        </div>
+        <h3 id="sub1_7">Plotly Layers</h3>
+        <p>Plotly layers are the building blocks of a plotly object. The add_*() functions, such as add_histogram(), add_lines(), add_markers(), etc., define how data is rendered into geometric objects, following the layered grammar of graphics. A layer, in this context, comprises five components: data, aesthetic mappings (e.g., color), geometric representation (e.g., rectangles), statistical transformations (e.g., sum), and positional adjustments (e.g., dodge).</p>
+        <ol>
+            <li>In addition to layout(), there are add_*() functions (e.g., add_histogram(), add_lines(), etc.) defining how data is rendered into geometric objects, following the layered grammar of graphics.</li>
+            <li>A layer, in this context, comprises five components: data, aesthetic mappings (e.g., color), geometric representation (e.g., rectangles), statistical transformations (e.g., sum), and positional adjustments (e.g., dodge).</li>
+            <li>plot_ly() automatically adds a layer; explicitly adding layers, like add_histogram(), clarifies the plot's elements (e.g., plot_ly(diamonds, x = ~cut) requires add_histogram()).</li>
+            <li>plotly offers add_*() functions like add_histogram() and add_bars(), where add_histogram() computes statistics dynamically, while add_bars() needs pre-specified bar heights.</li>
+            <li>There are several other add_*() functions, with some performing statistical calculations in the browser (e.g., add_histogram2d(), add_contour(), add_boxplot()), while others focus more on graphics than statistics.</li>
+            <li>Non-statistical layers generally offer faster runtime due to reduced computational load, while statistical layers provide more client-side interactivity options.</li>
+            <li>Optimizing performance often involves rendering large sets of graphical elements, where Canvas via toWebGL() might be preferable over SVG (default).</li>
+            <li>Combining multiple graphical layers into one plot is common, and understanding plot_ly() becomes crucial for this purpose.</li>
+        </ol>
+        <p>Plotly layout is a collection of attributes that define the plot's appearance, such as the title, axis labels, and background color. The layout() function modifies the layout components of a plotly object. The layout() function is a wrapper for the layout attributes, which are defined in the plotly.js schema.</p>
+        <h3 id="sub1_8">GGPlotly</h3>
+        <p>The ggplotly() function in plotly translates ggplot2 visuals into interactive plotly ones, simplifying the addition of interactivity to ggplot2 workflows.  This function leverages ggplot2's intuitive interface for effortless exploration of statistical summaries across different groups using various geoms.</p>
+        <p> It efficiently handles facets, relative frequency displays, and seamlessly supports extensions like ggforce, naniar, and GGally, enhancing the visualization capabilities. It showcases different ways to visualize data, leveraging geom_sina(), stat_summary(), and ggplot2's strengths, facilitating in-depth analysis and model diagnostics. ggplotly() empowers the visualization toolkit by enabling interactive features like hover, zoom, and filtering, enhancing exploratory analysis, and allowing linking multiple views. Despite not always yielding perfect conversions, modifying ggplotly()'s return values or customizing tooltips can enhance interactivity, covered in later chapters for advanced modifications.</p>
+        <pre>
+            Plot &lt;- |GGplot Object|
+            ggplotly(Plot)
+
+            # Example
+            ggplotly(ggplot(diamonds, aes(x = carat, y = price, color = cut)) + geom_point())
+        </pre>
+        <h3 id="sub1_9">Traces</h3>
+        <p>In Plotly, a "trace" refers to a visual representation of data on a plot. Each trace represents a specific set of data points and contains information about how that data should be displayed. Traces can include scatter plots, lines, bars, histograms, heatmaps, and more.</p>
+        <table>
+            <tr>
+              <th>Key Points</th>
+              <th>Description</th>
+            </tr>
+            <tr>
+              <td>Type of Data</td>
+              <td>Traces encapsulate specific types of data visualizations, such as scatter points, lines, bars, or other chart elements.</td>
+            </tr>
+            <tr>
+              <td>Attributes</td>
+              <td>Each trace has its own set of attributes defining appearance and behavior, including settings for markers, lines, colors, labels, etc.</td>
+            </tr>
+            <tr>
+              <td>Multiple Traces</td>
+              <td>Allows having multiple traces on a single plot, facilitating visualization and comparison of different datasets or aspects of the same dataset.</td>
+            </tr>
+            <tr>
+              <td>Plot Composition</td>
+              <td>Traces are combined to create a complete plot. Each trace is added to the plot layout and configured individually, collectively representing the entire dataset or multiple datasets.</td>
+            </tr>
+        </table>
+        <pre>
+            plot_ly() %>% 
+            add_trace(
+                type = "scatter",
+                mode = "markers+lines",
+                x = 4:6,
+                y = 4:6
+            ) \br
+            plot_ly() %>% 
+            add_trace(
+                type = "scatter",
+                mode = "markers",
+                x = 4:6,
+                y = 4:6
+            ) %>% 
+            add_trace(type = "scatter",
+                        mode = "lines",
+                        x = 4:6,
+                        y = 4:6)
+        </pre>
+        <p>The first block of code adds a single trace to the plot. It creates a scatter plot where markers and lines are both visible (mode = "markers+lines"), and it uses the values 4, 5, and 6 for both x and y axes. In the second block, we employ the two traces separately, allowing users to interactively manipulate each individual trace.</p>
+        <div class="frame"><iframe src="int4.html" frameborder="0"></iframe></div>
+        <h3 id="sub1_10">ToolTip</h3>
+        
+        <h3 id="sub1_11">Layout</h3>
+    </div>
+
+    <!-- Section 2 -->
+    <div class="section sec2">
+        <h2 id="sec2">Chart Types</h2>
+        <table border="1">
+            <tr>
+              <th colspan="4">Plotly R Library Basic Charts</th>
+            </tr>
+            <tr>
+              <td colspan="4">Plotly's R graphing library makes interactive, publication-quality graphs online. Examples of how to make basic charts.</td>
+            </tr>
+            <tr>
+              <td>Scatter and Line Plots<br/><em>Visualize relationships between numeric variables</em></td>
+              <td>Bar Charts<br/><em>Compare data across different categories</em></td>
+              <td>Bubble Charts<br/><em>Display three dimensions of data</em></td>
+              <td>WebGL vs SVG in R<br/><em>Comparing rendering techniques in R</em></td>
+            </tr>
+            <tr>
+              <td>Filled Area Plots<br/><em>Display data and emphasize trends</em></td>
+              <td>Horizontal Bar Charts<br/><em>Present data horizontally</em></td>
+              <td>Gantt Charts<br/><em>Visualize project schedules and timelines</em></td>
+              <td>Sunburst Charts<br/><em>Hierarchical data visualization</em></td>
+            </tr>
+            <tr>
+              <td>Pie Charts<br/><em>Show proportions of a whole</em></td>
+              <td>Tables<br/><em>Display structured data</em></td>
+              <td>Dot Plots<br/><em>Represent distributions of data</em></td>
+              <td>Dumbbell Plots<br/><em>Visualize changes between two points</em></td>
+            </tr>
+            <tr>
+              <td>Sankey Diagram<br/><em>Show flow or relationships between entities</em></td>
+              <td>Treemap Charts<br/><em>Represent hierarchical data</em></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </table>
+        <h3 id="sub2_1">Basic Scatterplot</h3>
+        <p>In a scatter plot, markers refer to the individual data points displayed on the chart. Each data point is represented by a marker, which is a visual element such as a dot, symbol, or shape that signifies the value of the data point on both the x and y axes.</p>
+          <pre>
+            # Basic Scatterplot \br
+            p_1 &lt;- dat %>% ggplot(aes(height, final_weight)) + 
+            geom_point(size = 4, shape = 21, stroke = 1.1, color = 'black', fill = rgb(0,0,0,0.5)) +
+            papaja::theme_apa() +
+            labs(title = 'Height vs Weight', y = 'Weight', x = 'Height') \br
+
+            ggplotly(p_1)
+          </pre>
+            <div class="image">
+                <img src="img9.jpeg" alt="">
+            </div>
+            <pre>
+                dat %>% plot_ly(x = ~height, y = ~final_weight, mode = "markers", type = "scatter", name = "Scatter Points") %>%
+                add_trace(x = ~height, y = ~final_weight, mode = "lines", type = "scatter", name = "Smoothing Line") %>%
+                layout(title = "Scatter Plot with Smoothing Line")
+            </pre>
+            <h3>Marker Attributes</h3>
+            <p>Below, is a list of some common marker attributes that can be customized in Plotly:</p>
+            <table>
+                <tr>
+                  <th>Attribute</th>
+                  <th>Description</th>
+                </tr>
+                <tr>
+                  <td>size</td>
+                  <td>Sets the marker size.</td>
+                </tr>
+                <tr>
+                  <td>color</td>
+                  <td>Determines the marker color.</td>
+                </tr>
+                <tr>
+                  <td>symbol</td>
+                  <td>Specifies the marker symbol type.</td>
+                </tr>
+                <tr>
+                  <td>opacity</td>
+                  <td>Sets the marker opacity.</td>
+                </tr>
+                <tr>
+                  <td>line</td>
+                  <td>Defines the marker's border line properties.</td>
+                </tr>
+                <tr>
+                  <td>gradient</td>
+                  <td>Specifies the marker color scale gradient.</td>
+                </tr>
+                <tr>
+                  <td>sizeref</td>
+                  <td>Sets the scale factor for marker size.</td>
+                </tr>
+                <tr>
+                  <td>sizemode</td>
+                  <td>Specifies how the marker size is determined.</td>
+                </tr>
+                <tr>
+                  <td>showlegend</td>
+                  <td>Determines whether the marker appears in the legend.</td>
+                </tr>
+            </table>
+            <pre>
+                p1 &lt;- plot_ly(type = "scatter") %>%
+                    add_trace(mode = "markers",x=1:2,y=rep(1,2), marker = list(size = 20) ,name = "Default Marker") %>% 
+                    add_trace(x=1:2,y=rep(2,2),mode = "markers", marker = list(size = 30, color = "red"), name = "Custom Size & Color") %>%
+                    add_trace(x=1:2,y=rep(3,2),mode = "markers", marker = list(size = 20,symbol = "square"), name = "Square Markers") %>%
+                    add_trace(x=1:2,y=rep(4,2),mode = "markers", marker = list(size = 20,symbol = "triangle-up", color = "green"), name = "Triangle Markers") %>%
+                    add_trace(x=1:2,y=rep(5,2),mode = "markers", marker = list(size = 20,symbol = "diamond", opacity = 0.7), name = "Custom Opacity") %>%
+                    add_trace(x=1:2,y=rep(6,2),mode = "markers", marker = list(size = 20, opacity = 1, line = list(color = 'black',width = 5)), name = "border") %>%
+                    layout(title = "Custom Marker Styles in Plotly", xaxis = list(range = c(0, 4)))
+            </pre>
+            <div class="frame"><iframe src="int5.html" frameborder="0"></iframe></div>
+            <h3>Grouped Scatterplots</h3>
+            <p>Grouped scatterplots are a great way to visualize the relationship between two variables across different groups. In the example below, we can see how the relationship between height and weight varies across different groups. </p>
+            <pre>
+                p1 &lt;- starwars %>% filter(!mass>300) %>% ggplot(aes(height,mass)) +
+                geom_smooth(method = 'lm',se = F) +
+                papaja::theme_apa()
+
+                int1 &lt;- p1 +  geom_point(color = 'black', fill = 'red', shape = 21, size = 3.5, alpha = 0.8)
+                int2 &lt;- p1 + geom_point(data = starwars %>% drop_na(),aes(fill = sex), color = 'black', shape = 21, size = 3.5, alpha = 0.8) + theme(legend.position = c(0.15,0.85))
+                int3 &lt;- p1 + geom_point(data = starwars %>% drop_na(),aes(shape = sex), color = 'black', size = 3.5, alpha = 0.8) + theme(legend.position = c(0.15,0.85))
+
+                int_plot &lt;- ggplotly(int3)
+            </pre>
+            <div class="images">
+                <img src="img10.jpeg" alt="">
+                <img src="img11.jpeg" alt="">
+            </div>
+            <div class="frame"><iframe src="int1.html" frameborder="0"></iframe></div>
+            <pre>
+                starwars %>% 
+                    plot_ly() %>%
+                    add_trace(type = 'scatter', mode = 'markers', x = ~height, y = ~mass, color = ~sex,colors = col, marker = list(size = 20, opacity = 0.5, line = list(color = 'black', width = 2)))
+            </pre>
+            <div class="frame"><iframe src="int6.html" frameborder="0"></iframe></div>
+            <h3 id="sub2_2">Line Plots</h3>
+            <p>Line plots, also known as line charts or line graphs, are a type of data visualization that displays information as a series of data points connected by straight lines. They are particularly useful for showing trends and relationships between continuous data points over a continuous interval or time period.</p>
+            
+            <pre>
+                economics %>% ggplot(aes(date, unemploy)) +
+                geom_line() +
+                papaja::theme_apa()
+
+                int_plot2 &lt;- (economics %>%
+                arrange(psavert) %>%
+                mutate(decade = 10 * (year(date) %/% 10),
+                        decade = factor(decade)) %>% 
+                ggplot(aes(date, unemploy, group = decade, color = decade)) +
+                geom_line() +
+                papaja::theme_apa() )%>% ggplotly()
+            </pre>
+            <div class="image">
+                <img src="img12.jpeg" alt="">
+            </div>
+            <div class="frame"><iframe src="int2.html" frameborder="0"></iframe></div>
+            <p>Above, we can see a simple demonstration of how interactivity with lineplots can provide us with a lot more information. We can see from the above static plot, that unemployment rate changes over time, however, the change is non-linear and in part, a function of the rising population and economic conditions. With some minor tweaks, we can add a certain amount of interactivity, where users can toggle unemployment rates by decade, offering an entirely new flavor to the visualization.</p>
+            <p>If we wish to identify, yearly trends in unemployment rates by month, it would be rather tedious to examine the entire plot, or a facetted plot. Alternatively, we could use our newfound skills and interactively present the plot allowing users/viewers to manipulate certain facets and identify more meaningful trends. </p>
+            <pre>
+                int_plot3 &lt;- (econ %>% ggplot(aes(mnth, unemploy, col = ordered(yr))) +
+                geom_line(show.legend = F) +
+                scale_x_continuous(breaks = 1:12,labels = month.abb) +
+                papaja::theme_apa()) %>% ggplotly()
+            </pre>
+            <div class="frame"><iframe src="int3.html" frameborder="0"></iframe></div>
+            <p>Similarly, we can use the ggplot framework to produce all kinds of plots with an interactive twist.</p>
+            <h3 id="sub2_3">Bar Charts</h3>
+            <p>Bar charts are a type of data visualization that are used to display and compare the number, frequency or other measure (e.g., mean) for different discrete categories or groups. The bars can be either vertical (sometimes called a column graph) or horizontal. The height or length of the bar is proportional to the number of observations or frequency.</p>
+            <p>The add_bars() and add_histogram() functions in Plotly.js encapsulate the 'bar' and 'histogram' trace types, respectively. They differ primarily in their handling of data: add_bars() requires both x and y values for bar heights, while add_histogram() needs only a single variable, letting Plotly.js handle binning in the browser. Despite their similar usage, both can visualize either numeric or discrete variables, differing in where the binning occurs.</p>
+          <pre>
+            add_bar(p, x = NULL, y = NULL, text = NULL, hovertext = NULL, hoverinfo = NULL, 
+            hoverlabel = NULL, marker = NULL, opacity = NULL, base = NULL, width = NULL, 
+            x0 = NULL, dx = NULL, y0 = NULL, dy = NULL, orientation = NULL, 
+            name = NULL, error_y = NULL, error_x = NULL, ids = NULL, showlegend = NULL, 
+            legendgroup = NULL, stackgroup = NULL, alignmentgroup = NULL, offsetgroup = NULL, 
+            customdata = NULL, xaxis = NULL, yaxis = NULL, frame = NULL, 
+            connectgaps = NULL, visible = NULL, ...)
+          </pre>
+          <ol>
+            <li><code>p</code>: A plotly object.</li>
+            <li><code>x</code>: Sets the x coordinates.</li>
+            <li><code>y</code>: Sets the y coordinates.</li>
+            <li><code>text</code>: Sets text elements associated with each (x,y) pair.</li>
+            <li><code>hovertext</code>: Sets text elements associated with each (x,y) pair to appear on hover.</li>
+            <li><code>hoverinfo</code>: Determines which trace information appears on hover.</li>
+            <li><code>hoverlabel</code>: Sets the hover label properties.</li>
+            <li><code>marker</code>: Sets the marker properties (color, size, etc.).</li>
+            <li><code>opacity</code>: Sets the opacity of the bars.</li>
+            <li><code>base</code>: Sets the base of the bars.</li>
+            <li><code>width</code>: Sets the bar width.</li>
+            <li><code>x0</code>: Alternate to <code>x</code>.</li>
+            <li><code>dx</code>: Sets the x coordinate step.</li>
+            <li><code>y0</code>: Alternate to <code>y</code>.</li>
+            <li><code>dy</code>: Sets the y coordinate step.</li>
+            <li><code>orientation</code>: Sets the orientation of the bars ('v' for vertical, 'h' for horizontal).</li>
+            <li><code>name</code>: Sets the trace name.</li>
+            <li><code>error_y</code>: Sets the y-axis error bars.</li>
+            <li><code>error_x</code>: Sets the x-axis error bars.</li>
+            <li><code>ids</code>: Assigns id labels to each datum.</li>
+            <li><code>showlegend</code>: Determines whether or not an item corresponding to this trace is shown in the legend.</li>
+            <li><code>legendgroup</code>: Sets the legend group for this trace.</li>
+            <li><code>stackgroup</code>: Sets the stack group.</li>
+            <li><code>alignmentgroup</code>: Sets the alignment group.</li>
+            <li><code>offsetgroup</code>: Sets the offset group.</li>
+            <li><code>customdata</code>: Assigns extra data to each datum.</li>
+            <li><code>xaxis</code>: Sets a reference to a named x axis.</li>
+            <li><code>yaxis</code>: Sets a reference to a named y axis.</li>
+            <li><code>frame</code>: Sets the frame.</li>
+            <li><code>connectgaps</code>: Determines whether or not gaps in the provided data arrays are connected.</li>
+            <li><code>visible</code>: Determines whether or not this trace is visible.</li>
+        </ol>
+        <pre>
+          d_1 &lt;- ISLR2::Auto
+
+          d_1 %>% summarise(displacement = mean(displacement), .by = cylinders) %>% mutate(cylinders = factor(cylinders)) %>% plot_ly(x = ~cylinders, y = ~displacement, type = 'bar')
+        </pre>
+        <div class="frame"><iframe src="int7.html" frameborder="0"></iframe></div>
+        <p>Creating Simple Histograms is a simple extension using the plotly framework.</p>
+        <pre>
+          p1 &lt;- plot_ly(diamonds, x = ~price) %>% add_histogram(name = "plotly.js")
+        </pre>
+        <p>The add_histogram() function sends all of the ob- served values to the browser and lets plotly.js perform the binning.</p>
+        <h3>While there is a distinction between histograms and bar plots, add_histogram and add_bars handle the data similarly. </h3>
+        <pre>
+          p1 &lt;- plot_ly(diamonds, x = ~cut) %>%
+          add_histogram()
+        p2 &lt;- diamonds %>%
+          count(cut) %>%
+          plot_ly(x = ~cut, y = ~n) %>% add_bars()
+        
+        subplot(p1,p2)</pre>
+        <div class="frame"><iframe src="int8.html" frameborder="0"></iframe></div>
+        <h3>Multiple Interactive distributions</h3>
+        <pre>
+          diamonds %>%
+          group_split(cut) %>%
+          map(~.x %>% plot_ly(x = ~price,type = "histogram",name = paste0("Cut = ", unique(.$cut)))) %>%
+          subplot(nrows = 2, shareX = TRUE,shareY = T ,titleX = FALSE) %>% hide_legend()
+        </pre>
+        <div class="frame"><iframe src="int9.html" frameborder="0"></iframe></div>
+        <p>The above code splits the datasets into lists which further allows us to map a certain histogram function on each subset of the data. The functionality of "subplot" further allows you to comine all the plot lists into one with a shared x and y axis.</p>
+        <h3>Grouped Bar Plots</h3>
+        <p>The easiest way to produce grouped bar plots is similar to ggplot. Where we can group or color by a discrete variable. </p>
+        <pre>
+          plot_ly(diamonds, x = ~cut, color = ~clarity) %>% add_histogram()
+        </pre>
+        <div class="frame"><iframe src="int10.html" frameborder="0"></iframe></div>
+        <p>The layout argument allows you to specify the type of grouping. Several groupings are available in plotly such as - </p>
+        <ol>
+            <li>group</li>
+            <li>stack</li>
+            <li>overlay</li>
+            <li>relative</li>
+        </ol>
+        <pre>
+          plot_ly(diamonds, x = ~cut, color = ~clarity) %>% add_histogram() %>% layout(barmode = "stack")
+        </pre>
+        <h3 id="sub2_4">Box and Violin Plots</h3>
+        <p>Box plots and violin plots are used to visualize the distribution of data and compare the distribution of data between different groups or categories. Box plots display the median, quartiles, and outliers of a dataset, while violin plots provide a more detailed view of the data distribution by showing the probability density of the data at different values.</p>
+        <h3>Box Plot</h3>
+        <pre>
+          p1 &lt;- ggplot(diamonds, aes(x = cut, y = price)) + geom_boxplot()
+          ggplotly(p1)
+        </pre>
+        <pre>
+          p1 &lt;- plot_ly(diamonds, x = ~cut, y = ~price, type = "box")
+        </pre>
+        <p>Additionally, we can easily produce violin plots, boxplots, and other combinations as follows - </p>
+        <pre>
+          p1 &lt;- diamonds %>% mutate(carat = cut_interval(carat, 5)) %>% ggplot(aes(x = carat, y = price)) + geom_boxplot()
+          ggplotly(p1)
+
+          p2 &lt;- diamonds %>% mutate(carat = cut_interval(carat, 5)) %>% plot_ly(x = ~carat, y = ~price, type = 'box')
+
+          p3 &lt;- diamonds %>% mutate(carat = cut_interval(carat, 5)) %>% plot_ly(x = ~carat, y = ~price, type = 'violin')
+
+          p4 &lt;- plot_ly(diamonds, x = ~price, y = ~interaction(clarity, cut)) %>% add_boxplot(color = ~clarity) %>%
+            layout(yaxis = list(title = ""))
+        </pre>
+        <div class="frame"><iframe src="int11.html" frameborder="0"></iframe></div>
+        <h3 id="sub2_5">2d Frequencies</h3>
+        <p>2D frequency plots are used to visualize the relationship between two categorical variables. They are particularly useful for identifying patterns, trends, and associations between the variables. In Plotly, 2D frequency plots can be created using the add_heatmap() function, which displays the frequency of occurrences of each combination of categories in a grid format.</p>
+        <pre>
+          p &lt;- plot_ly(diamonds, x = ~log(carat), y = ~log(price))
+
+          subplot(
+            add_histogram2d(p) %>%
+              colorbar(title = "default") %>% layout(xaxis = list(title = "default")) %>% 
+            add_histogram2d(p, zsmooth = "best") %>% colorbar(title = "zsmooth") %>% layout(xaxis = list(title = "zsmooth")),
+            add_histogram2d(p, nbinsx = 60, nbinsy = 60) %>% colorbar(title = "nbins") %>%
+              layout(xaxis = list(title = "nbins")),
+            shareY = TRUE, titleX = TRUE
+          )
+
+        </pre>
+        <div class="frame"><iframe src="int12.html" frameborder="0"></iframe></div>
+
+        <p>The plotly package offers two functions for displaying rectangular bins: add_heatmap() and add_histogram2d(). For numeric data, add_heatmap() is a 2D analog of add_bars() and requires pre-computed bins, while add_histogram2d() is a 2D analog of add_histogram() and computes bins in the browser, making it more suitable for exploratory purposes. add_histogram2d() features zsmooth for increasing bin numbers through bi-linear interpolation, and nbinsx/nbinsy to set the number of bins in the x and y directions. Additionally, filled contours can be used instead of bins with add_histogram2dcontour().</p>
+
+        <h3 id="sub2_6">Heat-Maps/Contours</h3>
+        <p>Heatmaps and contour plots are used to visualize the distribution of data across two dimensions. Heatmaps display data as a grid of colored cells, where the color intensity represents the value of the data at each cell. Contour plots, on the other hand, display data as a series of contour lines, where each line represents a constant value of the data.</p>
+        <pre>
+          # Heatmaps
+
+          p1 &lt;- plot_ly(diamonds, x = ~cut, y = ~color, z = ~price) %>% add_heatmap()
+
+          # Contours 
+
+          p2 &lt;- plot_ly(diamonds, x = ~cut, y = ~color, z = ~price) %>% add_histogram2dcontour()
+
+          g1 &lt;- subplot(p1,p2,nrows = 2)
+        </pre>
+
+        <div class="frame"><iframe src="int13.html" frameborder="0"></iframe></div>
+        <p>Heatmaps and contour plots are useful for visualizing the distribution of data across two dimensions. They are particularly useful for identifying patterns, trends, and associations between variables. In Plotly, heatmaps and contour plots can be created using the add_heatmap() and add_histogram2dcontour() functions, respectively.</p>
+
+        <h3 id="sub2_7">3D Plots</h3>
+        <p>3D plots are used to visualize data in three dimensions. They are particularly useful for visualizing complex relationships between multiple variables. In Plotly, 3D plots can be created using the add_trace() function</p>
+        <p>As it turns out, by simply adding a z attribute plot_ly() automatically renders markers, lines, and paths in three dimensions.</p>
+        <pre>
+          p1 &lt;-  plot_ly(diamonds, x = ~carat, y = ~price, z = ~depth) %>% add_markers(size = 0.5)
+
+          p2 &lt;- plot_ly(diamonds, x = ~carat, y = ~price, z = ~cut) %>% add_paths(color = ~cut)
+
+          p3 &lt;- plot_ly(diamonds, x = ~carat, y = ~price, z = ~cut) %>% add_lines(color = ~cut)
+
+          x &lt;- seq_len(nrow(volcano)) + 100
+          y &lt;- seq_len(ncol(volcano)) + 500
+          p4 &lt;- plot_ly() %>% add_surface(x = ~x, y = ~y, z = ~volcano)
+
+          subplot(p1,p2,p3,p4,nrows = 2)
+        </pre>
+        <div class="frame"><iframe src="int14.html" frameborder="0"></iframe></div>
+        <div class="frame"><iframe src="int15.html" frameborder="0"></iframe></div>
+        <div class="frame"><iframe src="int16.html" frameborder="0"></iframe></div>
+        <div class="frame"><iframe src="int17.html" frameborder="0"></iframe></div>
+
+        <h3 id="sub2_8">Maps</h3>
+      <p>Plotly offers various ways to create maps, broadly categorized into integrated and custom maps. Integrated maps leverage Plotly's built-in support via Mapbox or d3.js, suitable for quick visualizations without sophisticated geo-spatial representations. Custom maps offer full control over rendering geo-spatial objects, ideal for more complex visualizations.</p>
+
+      <h3>Types of Integrated Maps</h3>
+      <p>Plotly supports two types of integrated maps:</p>
+      <ul>
+        <li><strong>Mapbox</strong>: Uses <code>plot_mapbox()</code> for creating maps with dynamic basemaps.</li>
+        <li><strong>d3.js Basemap</strong>: Uses <code>plot_geo()</code> for maps with different projections.</li>
+      </ul>
+
+      <h3>Arguments for Integrated Maps</h3>
+      <table>
+          <thead>
+              <tr>
+                  <th>Argument</th>
+                  <th>Description</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td><code>layout.mapbox.style</code></td>
+                  <td>Controls the styling of the Mapbox basemap. Examples: "streets", "satellite", "dark".</td>
+              </tr>
+              <tr>
+                  <td><code>layout.updatemenus</code></td>
+                  <td>Creates a dropdown menu to control map styles interactively.</td>
+              </tr>
+              <tr>
+                  <td><code>projection</code></td>
+                  <td>Used in <code>plot_geo()</code> to specify the type of map projection. Examples: "mercator", "orthographic".</td>
+              </tr>
+          </tbody>
+      </table>
+
+      <h3>Example 1: Bubble Chart with Mapbox</h3>
+      <pre>
+  plot_mapbox(maps::canada.cities) %>%
+    add_markers(
+      x = ~long,
+      y = ~lat,
+      size = ~pop,
+      color = ~country.etc,
+      colors = "Accent",
+      text = ~paste(name, pop),
+      hoverinfo = "text"
+    )</pre>
+
+      <h3>Example 2: Flight Paths with plot_geo()</h3>
+      <pre>
+      geo &lt;- list(
+        projection = list(type = 'orthographic', rotation = list(lon = -100, lat = 40, roll = 0)),
+        showland = TRUE,
+        landcolor = toRGB("gray95"),
+        countrycolor = toRGB("gray80")
+      )
+      plot_geo(color = I("red")) %>%
+        add_markers(data = air, x = ~long, y = ~lat, text = ~airport, size = ~cnt, hoverinfo = "text", alpha = 0.5) %>%
+        add_segments(data = group_by(flights, id), x = ~start_lon, xend = ~end_lon, y = ~start_lat, yend = ~end_lat, alpha = 0.3, size = I(1), hoverinfo = "none") %>%
+        layout(geo = geo, showlegend = FALSE)
+      </pre>
+      <h3>Choropleths</h3>
+        <pre><code>
+        density &lt;- state.x77[, "Population"] / state.x77[, "Area"]
+        g &lt;- list(scope = 'usa', projection = list(type = 'albers usa'), lakecolor = toRGB('white'))
+        plot_geo() %>%
+          add_trace(z = ~density, text = state.name, locations = state.abb, locationmode = 'USA-states') %>%
+          layout(geo = g)
+        </code></pre>
+        <div class="frame"><iframe src="int18.html" frameborder="0"></iframe></div>
+
+    <h3>Custom Maps</h3>
+    <p>The <code>sf</code> R package allows for creating custom maps with more control over geo-spatial data. Here's how to create a simple map with <code>sf</code>:</p>
+    <pre><code>
+    library(rnaturalearth)
+    world &lt;- ne_countries(returnclass = "sf")
+    plot_ly(world, color = I("gray90"), stroke = I("black"), span = I(1))
+    </code></pre>
+
+    <h3>Types of Cartograms</h3>
+    <ul>
+        <li><strong>Continuous Area Cartogram</strong>: Distorts the size of geo-spatial polygons to encode a numeric variable.</li>
+        <li><strong>Dorling Cartogram</strong>: Uses circles to represent geo-spatial objects, with size encoding the variable of interest.</li>
+        <li><strong>Non-Contiguous Cartogram</strong>: Preserves the shape of polygons while distorting their size.</li>
+    </ul>
+
+    <h3>Example: Continuous Area Cartogram</h3>
+    <pre>
+    library(cartogram)
+    us_cont &lt;- cartogram_cont(usa_sf("laea"), "pop_2014")
+    plot_ly(us_cont) %>%
+      add_sf(color = ~pop_2014, split = ~name, text = ~paste(name, scales::number_si(pop_2014)), hoverinfo = "text", hoveron = "fills") %>%
+      layout(showlegend = FALSE) %>%
+      colorbar(title = "Population \n 2014")
+    </pre>
+
+    <h3>Example: Dorling Cartogram</h3>
+    <pre><code>
+    us_dor &lt;- cartogram_dorling(us, "pop_2014")
+    plot_ly(stroke = I("black"), span = I(1)) %>%
+      add_sf(data = us, color = I("gray95"), hoverinfo = "none") %>%
+      add_sf(data = us_dor, color = ~pop_2014, split = ~name, text = ~paste(name, scales::number_si(pop_2014)), hoverinfo = "text", hoveron = "fills") %>%
+      layout(showlegend = FALSE)
+    </code></pre>
+    </div>
+
+    <!-- Section 3 -->
+    <div class="section sec3">
+        <h2 id="sec3">Linking/Publishing Plots</h2>
+        <p>
+         You can save any widget created using htmlwidgets packages (e.g., plotly, leaflet, DT) as a standalone HTML file using the htmlwidgets::saveWidget() function. By default, this function generates a completely self-contained HTML file, which includes all necessary JavaScript and CSS dependencies. This makes it convenient to share the widget as a single HTML file. To optimize the file size, consider using the partial_bundle() function. This function automatically creates a reduced version of the necessary dependencies, significantly reducing the overall file size, especially when using basic chart types.
+        </p>
+        <h3 id="sub3_1">Saving Standalone HTMLS</h3>
+        <pre>
+            p1 &lt;- plot_ly(diamonds, x = ~carat, y = ~price, z = ~depth) %>% add_markers(size = 0.5)
+            saveWidget(p1, "plot1.html")
+        </pre>
+        <p>By default, the saveWidget() function generates a completely self-contained HTML file, which includes all necessary JavaScript and CSS dependencies. This makes it convenient to share the widget as a single HTML file. To optimize the file size, consider using the partial_bundle() function. This function automatically creates a reduced version of the necessary dependencies, significantly reducing the overall file size, especially when using basic chart types.</p>
+        <p>To Include the HTML file in RMarkdown, you can use the following code template -</p>
+        <pre>
+          ```{r}
+          htmltools::tags$iframe(
+            src = "p1.html",
+            scrolling = "no",
+            seamless = "seamless",
+            frameBorder = "0"
+            )
+          ```
+        </pre>
+        <p>Alternatively, you can use the includeHTML() function to embed the HTML file directly into the RMarkdown document.</p>
+        <h3 id="sub3_2">Arranging Interactive Plots</h3>
+        <p>he subplot() function in plotly offers a versatile way to combine multiple plotly objects into a single object, surpassing the flexibility of trellis display frameworks like ggplot2's facet_wrap(). Unlike these frameworks, subplot() does not require conditioning on a common variable. Its functionality is comparable to the grid.arrange() function from the gridExtra package, which arranges multiple ggplot2 or lattice plots in a single view.
+
+          The basic use of subplot() involves directly supplying plotly objects. For handling many plots, passing a list of plots can reduce redundancy. For example, you can create one time series per variable in a dataset and synchronize zoom/pan events across them.
+          
+          Conceptually, subplot() arranges plots into a table with a specified number of rows and columns via the nrows argument. By default, rows and columns share equal proportions of height and width, but these can be adjusted using the heights and widths arguments. This flexibility is useful for various visualizations, such as joint density plots or interactive dendrograms created with the heatmaply package.</p>
+        <img src="imga.jpeg" alt="">
+        <p>The above plot demonstrates a visual diagram of controlling the heights of rows and widths of columns. In this particular example, there are five plots being placed in two rows and three columns.</p>
+        <div class="frame"><iframe src="int19.html" frameborder="0"></iframe></div>
+        <p>Above, we see creative use of a subplot function to create maginal distributions along with a contour plot.</p>
+        <p>Sub Plots aren't the only way of linking multiple views. We can utilize the ggplot framework to do the same - </p>
+        <pre>
+          gg1 &lt;- ggplot(economics_long, aes(date, value)) + geom_line() + facet_wrap(~variable, scales = "free_y", ncol = 1)
+          gg2 &lt;- ggplot(economics_long, aes(factor(1), value)) + geom_violin() +
+          facet_wrap(~variable, scales = "free_y", ncol = 1) + theme(axis.text = element_blank(), axis.ticks = element_blank())
+          subplot(gg1, gg2)
+        </pre>
+        <div class="frame"><iframe src="int20.html" frameborder="0"></iframe></div>
+        <h3 id="sub3_3">Animating Views</h3>
+
+        <h3>Animation API</h3>
+        <p>Plotly supports key frame animations through the <code>frame</code> argument or aesthetic in both <code>plot_ly()</code> and <code>ggplotly()</code>. Additionally, the <code>ids</code> argument ensures smooth transitions between objects with the same ID, facilitating object constancy.</p>
+        <div class="frame"><iframe src="int21.html" frameborder="0"></iframe></div>
+        <h3>Example: Gapminder Animation</h3>
+        <p>The famous Gapminder animation demonstrates the relationship between GDP per capita and life expectancy over time.</p>
+        <pre><code>data(gapminder, package = "gapminder")
+        gg &lt;- ggplot(gapminder, aes(gdpPercap, lifeExp, color = continent)) +
+          geom_point(aes(size = pop, frame = year, ids = country)) +
+          scale_x_log10()
+        ggplotly(gg)</code></pre>
+
+        <h3>Key Frame Animation Components</h3>
+        <ul>
+            <li><strong>Play/Pause Button and Slider</strong>: These components control the animation.</li>
+            <li><strong>Customization</strong>: You can use functions like <code>animation_button()</code>, <code>animation_slider()</code>, and <code>animation_opts()</code> to customize the animation controls.</li>
+        </ul>
+
+        <h3>Customizing Animation</h3>
+        <p>The following example modifies the time between frames, transition easing, and the placement of animation controls.</p>
+        <pre><code>base &lt;- gapminder %>%
+          plot_ly(x = ~gdpPercap, y = ~lifeExp, size = ~pop, text = ~country, hoverinfo = "text") %>%
+          layout(xaxis = list(type = "log"))
+
+        base %>%
+          add_markers(color = ~continent, frame = ~year, ids = ~country) %>%
+          animation_opts(1000, easing = "elastic", redraw = FALSE) %>%
+          animation_button(x = 1, xanchor = "right", y = 0, yanchor = "bottom") %>%
+          animation_slider(currentvalue = list(prefix = "YEAR ", font = list(color = "red")))</code></pre>
+
+        <h3>Controlling Frame Order</h3>
+        <p>Frames are ordered numerically or alphabetically by default. Using factors provides more control over frame ordering. In the example below, continents are ordered by average life expectancy.</p>
+        <pre><code>meanLife &lt;- with(gapminder, tapply(lifeExp, INDEX = continent, mean))
+        gapminder$continent &lt;- factor(gapminder$continent, levels = names(sort(meanLife)))
+
+        base %>%
+          add_markers(data = gapminder, frame = ~continent) %>%
+          hide_legend() %>%
+          animation_opts(frame = 1000, transition = 0, redraw = FALSE)</code></pre>
+
+        <h3>Overlaying Frames</h3>
+        <p>You can overlay animated frames on top of a static background for better context.</p>
+        <pre><code>base %>%
+          add_markers(color = ~continent, showlegend = F, alpha = 0.2, alpha_stroke = 0.2) %>%
+          add_markers(color = ~continent, frame = ~year, ids = ~country) %>%
+          animation_opts(1000, redraw = FALSE)</code></pre>
+
+        <h3>Animation Support</h3>
+        <p>Currently, the scatter plotly.js trace type has full support for animation. For other chart types, creative solutions are necessary. For example, to animate a population pyramid (a bar chart), use <code>add_segments()</code> instead of <code>add_bars()</code>.</p>
+
+        <h3>Example: Population Pyramid</h3>
+        <p>Animating U.S. population projections by age and gender from 2018 to 2050.</p>
+        <pre><code>library(idbr)
+        us &lt;- bind_rows(
+          idb1(country = "US", year = 2018:2050, variables = c("AGE", "NAME", "POP"), sex = "male"),
+          idb1(country = "US", year = 2018:2050, variables = c("AGE", "NAME", "POP"), sex = "female")
+        )
+
+        us &lt;- us %>%
+          mutate(POP = if_else(SEX == 1, POP, -POP), SEX = if_else(SEX == 1, "Male", "Female"))
+
+        plot_ly(us, size = I(5), alpha = 0.5) %>%
+          add_segments(x = ~POP, xend = 0, y = ~AGE, yend = ~AGE, frame = ~time, color = ~factor(SEX))</code></pre>
+
+        <h3>Line Chart Alternative</h3>
+        <p>Visualizing the same data using lines instead of segments.</p>
+        <pre><code>plot_ly(us, alpha = 0.5) %>%
+          add_lines(x = ~AGE, y = ~abs(POP), frame = ~time, color = ~factor(SEX), line = list(simplify = FALSE)) %>%
+          layout(yaxis = list(title = "US population"))</code></pre>
+
+        <p>Plotly's animation API provides robust tools for creating dynamic, interactive visualizations. The <code>subplot()</code> function allows for flexible layout arrangements, and animation controls can be customized to enhance the user experience.</p>
+
+        <h3>Key Functions and Arguments</h3>
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>animation_opts()</code></td>
+                <td>Customize animation settings like frame duration and easing</td>
+            </tr>
+            <tr>
+                <td><code>animation_button()</code></td>
+                <td>Customize the play/pause button</td>
+            </tr>
+            <tr>
+                <td><code>animation_slider()</code></td>
+                <td>Customize the slider control</td>
+            </tr>
+        </table>
+        <h3 id = "sub3_4">Linking Views</h3>
+        <p>Linking views is a powerful technique for exploring complex data relationships. Plotly provides several methods for linking views, including brushing, highlighting, and filtering. These techniques allow users to interact with one view and see the corresponding changes in other views, providing a more comprehensive understanding of the data.</p>
+        <h3>Graphically Brushing/Highlighting</h3>
+        <p>Graphical brushing and highlighting are interactive techniques that allow users to select data points in one view and see the corresponding changes in other views. This technique is particularly useful for exploring relationships between variables and identifying patterns in the data.</p>
+        <pre>
+          d_1 &lt;- ISLR2::Auto
+          # Custom color palette
+          custom_colors &lt;- c("#FF5733", "#33FF57", "#3357FF", "#F7FF33", "#FF33A6", "#33FFF7", "#F733FF")
+
+          p &lt;- d_1 %>% 
+            mutate(year = factor(year)) %>% 
+            highlight_key(~year) %>% 
+            plot_ly(
+              x = ~mpg, 
+              y = ~acceleration, 
+              color = ~year,
+              mode = "markers+text", 
+              textposition = "top",
+              colors = custom_colors
+            ) %>%
+            highlight(on = "plotly_hover", off = "plotly_doubleclick")
+        </pre>
+        <div class="frame"><iframe src="int22.html" frameborder="0"></iframe></div>
+        <p>The above plot, the year column in the dataset is converted to a factor, and highlight_key is used to enable interactive highlighting based on the year values. The plot_ly function is used to create a scatter plot with mpg on the x-axis and acceleration on the y-axis, with data points colored according to the custom palette. Both markers and text are displayed, with text positioned at the top of each marker. The highlight function adds interactivity, allowing users to highlight points by hovering and reset the highlights by double-clicking.</p>
+        <h3>Adding a selector</h3>
+        <p>Adding a selector to the plot allows users to choose which variable to highlight. This is particularly useful when exploring relationships between multiple variables.</p>
+        <pre>
+          data(txhousing, package = "ggplot2")
+          # declare `city` as the SQL 'query by' column
+          tx &lt- highlight_key(txhousing, ~city,"<b>Select a City</b>")
+          # initiate a plotly object
+          base &lt- plot_ly(tx, color = I("black")) %>% group_by(city)
+          # create a time series of median house price
+          ts &lt- base %>%
+            group_by(city) %>%
+            add_lines(x = ~date, y = ~median, width = 0.5)
+
+          highlight(ts, on = "plotly_click",
+                    selectize = TRUE,
+                    dynamic = TRUE,
+                    persistent = TRUE,color = 'red',
+                    selected = attrs_selected(line = list(width = 3)))
+        </pre>
+        <div class="frame"><iframe src="int23.html" frameborder="0"></iframe></div>
+        <p>The above plot demonstrates how to add a selector to the plot, allowing users to choose which variable to highlight. The plotly object is initiated with the base plot, and a time series of median house prices is created for each city. The highlight function is used to add interactivity, enabling users to select a city by clicking on the plot. The selected city is highlighted in red, and the line width is increased to 3.</p>
+        <h3 id = "sub3_5">Linking Sub-Plots</h3>
+        <p>Sub-plots are a powerful way to visualize multiple views of the same data. Plotly provides several methods for linking sub-plots, including shared axes, linked brushing, and synchronized zooming. These techniques allow users to interact with one sub-plot and see the corresponding changes in other sub-plots, providing a more comprehensive understanding of the data.</p>
+        <pre>
+          dot_plot &lt;- base %>%
+          summarise(miss = sum(is.na(median))) %>% filter(miss > 0) %>%
+          add_markers(
+            x = ~miss,
+            y = ~forcats::fct_reorder(city, miss), hoverinfo = "x+y"
+          ) %>% layout(
+            xaxis = list(title = "Number of months missing"),
+            yaxis = list(title = "") )
+        p &lt;- subplot(dot_plot, ts, widths = c(.2, .8), titleX = TRUE) %>% layout(showlegend = FALSE) %>%
+          highlight(on = "plotly_selected", dynamic = TRUE, selectize = TRUE)
+        </pre>
+        <div class="frame"><iframe src="int24.html" frameborder="0"></iframe></div>
+
+        <p>The above plot demonstrates how to link sub-plots using shared axes, linked brushing, and synchronized zooming. The dot_plot is created to visualize the number of missing values in the median house price data for each city. The ts plot displays the time series of median house prices for each city. The subplot function is used to combine the dot_plot and ts plots, with the widths argument specifying the relative widths of the sub-plots. The highlight function adds interactivity, allowing users to select data points in the dot_plot and see the corresponding changes in the ts plot.</p>
+
+        <h3>Key Functions and Arguments</h3>
+        <table>
+            <tr>
+                <th>Function</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><code>highlight_key()</code></td>
+                <td>Enable interactive highlighting based on a key variable</td>
+            </tr>
+            <tr>
+                <td><code>highlight()</code></td>
+                <td>Add interactivity to a plot, allowing users to highlight data points</td>
+            </tr>
+            <tr>
+                <td><code>subplot()</code></td>
+                <td>Combine multiple plotly objects into a single sub-plot</td>
+            </tr>
+        </table>
+
+        <h3>Filtering with Cross-talk</h3>
+        <p>Cross-talk is a powerful technique for filtering data across multiple views. It allows users to interact with one view and see the corresponding changes in other views, providing a more comprehensive understanding of the data. Plotly provides several methods for filtering data with cross-talk, including linked brushing, dynamic filtering, and persistent selection.</p>
+        <pre>
+          # Filtering
+          library(crosstalk)
+          # generally speaking, use a "unique" key for filter,
+          # especially when you have multiple filters!
+          d_1
+          tx &lt;- highlight_key(d_1,~name,"Select a Car")
+          gg &lt;- ggplot(tx) + geom_point(aes(weight, horsepower,group = name), color = 'red') + theme_minimal()
+          
+          p &lt;- bscols(
+            filter_select("id", "Select a car", tx, ~name), ggplotly(gg, dynamicTicks = TRUE),
+            widths = c(12, 12)
+          )
+        </pre>
+
+        <h3 id = "sub3_6">Dashboards</h3>
+        <pre>
+          library(crosstalk)
+          tx &lt;- highlight_key(d_1)
+
+          widgets &lt;-  bscols(
+            widths = c(12, 12, 12),
+            filter_select("cylinders", "Cylinders", tx, ~cylinders), filter_slider("horsepower", "Horsepower", tx, ~horsepower), filter_checkbox("year", "Years", tx, ~year, inline = TRUE))
+
+          p &lt;-  bscols(
+            widths = c(4, 8), widgets,
+            plot_ly(tx, x = ~mpg, y = ~acceleration, showlegend = FALSE) %>%
+              add_lines(color = I('red'), colors = "black") )
+        </pre>
+        <div class="frame"><iframe src="int25.html" frameborder="0"></iframe></div>
+        <p>While interactivity using plotly is a quick and dirty way of gettings things done, Interactive dashboards using Shiny or JavaScript offer dynamic and user-friendly ways to visualize and interact with data. Shiny, an R package, allows developers to build interactive web applications directly from R. It provides a seamless way to combine the power of R's data analysis capabilities with the interactivity of web technologies. With Shiny, users can create dashboards that respond to user inputs, such as sliders, dropdowns, and buttons, to dynamically update visualizations and analyses. JavaScript, on the other hand, is a versatile language for building interactive dashboards, often using libraries like D3.js, Plotly.js, or React. These libraries offer extensive customization options and the ability to handle complex interactions and animations, making it possible to create highly interactive and visually appealing dashboards. Both Shiny and JavaScript enable real-time data updates, interactive filtering, and responsive design, enhancing the user's ability to explore and understand data in an engaging and intuitive manner.</p>
+        <table>
+          <tr>
+              <th>Feature</th>
+              <th>Shiny</th>
+              <th>Plotly</th>
+          </tr>
+          <tr>
+              <td>Language Integration</td>
+              <td>Seamless integration with R, enabling direct use of R's data analysis and statistical functions.</td>
+              <td>Can be used with multiple languages including Python, R, and JavaScript, providing flexibility in development.</td>
+          </tr>
+          <tr>
+              <td>Customization</td>
+              <td>Extensive customization of user interfaces with various input and output widgets, allowing for complex interactions and layouts.</td>
+              <td>Highly customizable visualizations with extensive styling options and the ability to create complex, interactive charts.</td>
+          </tr>
+          <tr>
+              <td>Ease of Use</td>
+              <td>User-friendly for those familiar with R, with a simple syntax for creating interactive elements and linking them to data.</td>
+              <td>Easy to create interactive visualizations with minimal code, especially for users familiar with Plotly’s straightforward syntax.</td>
+          </tr>
+          <tr>
+              <td>Real-time Interactivity</td>
+              <td>Supports real-time data updates and dynamic interactions through reactive programming, making it ideal for live dashboards.</td>
+              <td>Provides real-time updates and interactivity, especially useful in web-based visualizations and data exploration tasks.</td>
+          </tr>
+          <tr>
+              <td>Complexity Handling</td>
+              <td>Capable of handling complex server-side computations and large data processing tasks through its reactive framework.</td>
+              <td>Efficiently handles complex visualizations and large datasets with smooth rendering and interaction capabilities.</td>
+          </tr>
+          <tr>
+              <td>Deployment</td>
+              <td>Easy deployment options through Shiny Server, Shinyapps.io, or Docker, enabling quick sharing and scaling of applications.</td>
+              <td>Flexible deployment on various platforms including web browsers, Jupyter notebooks, and standalone HTML files.</td>
+          </tr>
+          <tr>
+              <td>Community and Support</td>
+              <td>Strong community support with extensive documentation, tutorials, and a large number of contributed packages.</td>
+              <td>Wide community support with thorough documentation, examples, and active development in multiple programming languages.</td>
+          </tr>
+      </table>
+      </div>
+
+    <!-- Section 4 -->
+    <div class="section sec4">
+        <h2 id="sec4">Contact/Resources</h2>
+        <h3 id="sub4_1">Who am I?</h3>
+        <p>I am a 2nd year PhD student in the Quanitative Methods Department at York University. Although my research primary revolves around adapting machine learning methodologies to Psychology, I take immense pleasure in improving the statistical literacy for everyone involved.</p>
+        <p>Feel free to reach out to me at <a href="mailto:arjun10@yorku.ca">arjun10@yorku.ca</a>.</p>
+        <p><a href="https://arjun10g.github.io/My-Web-Site/">My Website</a></p>
+        <h3 id="sub4_2">Resources</h3>
+        <p>Here are some resources that I found particularly useful while creating this document -</p>
+        <ol>
+          <li>Interactive Web-Based Data Visualization with R,plotly,and shiny - Carson Sievert</li>
+          <li><a href="https://plotly-r.com/preface">Plotly Documentation</a></li>
+          <li><a href="https://plotly.com/r/getting-started/">Plotly for R</a></li>
+          <li><a href="https://r-graph-gallery.com/">R Graph Gallery</a></li>
+        </ol>
+    </div>
+
+    
+</body>
+</html>
