@@ -10,6 +10,9 @@
     scroll-behavior: smooth;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 
 .intro{
@@ -114,12 +117,13 @@ h1.title{
 }
 
 .section pre{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: clamp( 0.75rem, 0.5rem + 1.25vw, 1.25rem );
+    font-family: monospace;
+    font-size: clamp( 0.45rem, 0.30000000000000004rem + 0.8vw, 1rem );
     line-height: 160%;
     font-weight: 500;
     color: white;
     background: rgb(101, 99, 99);
+    width: 100%;
     padding: 10px 10px;
     border-radius: 5px;
     max-height: 40vh;
@@ -127,6 +131,7 @@ h1.title{
     outline: 1px solid black;
     box-shadow: 0 0 10px 0 black;
     margin: 30px 0;
+    white-space: pre-wrap;
 }
 
 .nav-bar{
@@ -211,7 +216,7 @@ h1.title{
     }
 
     table {
-        width: 100%;
+        width: 90%;
         border-collapse: collapse;
         text-align: center;
         font-family: Arial, sans-serif;
@@ -322,5 +327,8 @@ h1.title{
     }
     .section p{
         line-height: 150%;
+    }
+    pre{
+        font-size: 0.75rem;
     }
 }
